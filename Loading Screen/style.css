@@ -1,0 +1,83 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.5;
+    transform: skew(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skew(180deg);
+  }
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  background-color: #e6e4c1;
+  color: #333333;
+  margin: 120px 30px;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e4c1;
+  z-index: 2;
+
+  /* transition from loading screen */
+  transition: opacity 1s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading h2 {
+  font-weight: 700;
+  font-size: 3em;
+  animation: loading 2s normal ease-in;
+}
+/* add with js */
+.loading.hidden {
+  opacity: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 40px;
+
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  margin: 20% auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+  column-gap: 1em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  justify-self: safe center;
+}

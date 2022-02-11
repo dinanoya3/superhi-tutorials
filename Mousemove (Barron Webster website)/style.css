@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: yellow;
+}
+
+img {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+}
+
+img.first {
+    top: 0;
+    left: 0;
+}
+img.second {
+    top: 0;
+    right: 0;
+}
+img.third {
+    bottom: 0;
+    left: 0;
+}
+img.fourth {
+    bottom: 0;
+    right: 0;
+}
